@@ -56,14 +56,7 @@ nav{
     display: none;
 }
 
-@media (max-width: 952px){
-    .logo{
-        font-size: 15px;
-    }
-    .list li a{
-        font-size: 16px;
-    }
-}
+
 
 @media (max-width: 858px){
     .checkbtn{

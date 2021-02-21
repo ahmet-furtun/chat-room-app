@@ -2,9 +2,9 @@ import React, { FC } from 'react';
 
 import HomeNavbar from '../../components/navbar-home/navbar-home.component';
 
-import './home.component.css';
+import './home.page.css';
 
-const Home:FC = () => {
+const Home: FC = () => {
     return (
         <div>
             <HomeNavbar/>

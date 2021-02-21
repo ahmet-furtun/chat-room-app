@@ -1,0 +1,39 @@
+.avatar{
+    width:3em;
+    height: auto;
+	border: 0.2em dashed black;
+	display: inline-block;
+	-webkit-border-radius: 1em;
+	-moz-border-radius: 1em;
+	-o-border-radius: 1em;
+	-ms-border-radius: 1em;
+    border-radius: 1em;
+}
+
+.avatar:hover {
+    -webkit-border-radius: 0.3em;
+	-moz-border-radius: 0.3em;
+	-o-border-radius: 0.3em;
+	-ms-border-radius: 0.3em;
+    border-radius: 0.3em;
+    
+	-webkit-transition: border-radius 0.2s   linear ;
+	-moz-transition: border-radius 0.2s   linear ;
+	-o-transition: border-radius 0.2s   linear ;
+	-ms-ransition: border-radius 0.2s   linear ;
+    transition: border-radius 0.2s   linear ;
+}
+
+.avatar:active {
+    border: 0.2em solid black;
+}
+
+.image{
+    width:inherit;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+     -khtml-user-select: none; 
+       -moz-user-select: none; 
+        -ms-user-select: none;
+            user-select: none;
+}
