@@ -1,26 +1,44 @@
-.container-register {
+ .container-register {
     height: 100vh;
-    margin: 0;
     background-image: url("../../images/background-login.png");
-    padding: 3% 18.4%;
   
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .item-holder {
-    margin: 2% 0;
+
+  #register-form-container{
+    background-color: darkslategray;
+    opacity: 0.8;
+    width: 90vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-  
-  .textbox-register {
+
+  #title {
+    background-color: black;
+    color: white;
+  }
+
+  .form-container{
+    
+  }
+
+  .textbox-register{
     border: 0.3em solid black;
     font-family: "Press Start 2P", cursive;
     text-decoration: none;
-    width: 45.5%;
+    width: 50vh;
     padding: 0.5% 0;
   }
-  
+
   .textbox-register:hover {
     border: 0.3em solid grey;
   }
@@ -29,7 +47,7 @@
     border: 0.3em solid green;
     font-family: "Press Start 2P", cursive;
     text-decoration: none;
-    width: 45.5%;
+    width: 50vh;
     padding: 0.5% 0;
   }
   
@@ -41,7 +59,7 @@
     border: 0.3em solid red;
     font-family: "Press Start 2P", cursive;
     text-decoration: none;
-    width: 45.5%;
+    width: 50vh;
     padding: 0.5% 0;
   }
   
@@ -49,6 +67,11 @@
     border: 0.3em solid orangered;
   }
   
+  #progress-register {
+    width: 50vh;
+    height: 20px;
+  }
+
   .button-register-container {
     margin: 3% 0;
   }
@@ -85,69 +108,3 @@
     box-shadow: 0 0 0 black;
     transform: translate(0, 0);
   }
-  
-  .options {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  
-  #register-form-container {
-    padding: 3.8% 0;
-    font-size: 15px;
-  }
-  
-  #title {
-    background-color: black;
-    color: white;
-  }
-  
-  #progress-register {
-    width: 45.5%;
-    height: 20px;
-  }
-  
-  #date-register {
-    width: 45.5%;
-  }
-  
-  #label-register {
-    color: rgba(255, 255, 255, 0.747);
-  }
-  
-  #register-form-container {
-    background-color: darkslategray;
-    opacity: 0.8;
-    height: 100%;
-  }
-  
-  @media (max-width: 400px) {
-    .container-register {
-      padding: 4% 0;
-    }
-  
-    .textbox-register {
-      width: 78%;
-    }
-    #progress-register {
-      width: 78%;
-    }
-    #date-register {
-      width: 78%;
-    }
-  }
-  @media (min-width: 400px) and (max-width: 790px) {
-    .container-register {
-      padding: 4% 5%;
-    }
-    .textbox-register {
-      width: 60%;
-    }
-    #progress-register {
-      width: 60%;
-    }
-    #date-register {
-      width: 60%;
-    }
-  }
-  

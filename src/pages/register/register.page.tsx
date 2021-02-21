@@ -108,13 +108,11 @@ const Register: FC = () => {
     event: React.MouseEvent<HTMLSpanElement, MouseEvent>
   ) => {
     if (isPasswordsMatch) {
-      
       isPasswordsMatch = false;
     } else {
-  
     }
   };
-  
+
   return (
     <div className="container-register">
       <div
@@ -125,86 +123,71 @@ const Register: FC = () => {
           Welcome to Register!
         </p>
 
-        <div id="register-form-container">
-          <div className="item-holder">
-            <div className="nes-field">
-              <label htmlFor="name_field" id="label-register">
-                E-Mail
-              </label>
-              <input
-                type="text"
-                className={mailClass}
-                onChange={(e) => {
-                  setMail(e);
-                }}
-              ></input>
-            </div>
+        <div className="form-container">
+          <div className="nes-field">
+            <label htmlFor="name_field" id="label-register">
+              E-Mail
+            </label>
+            <input
+              type="text"
+              className={mailClass}
+              onChange={(e) => {
+                setMail(e);
+              }}
+            ></input>
           </div>
-
-          <div className="item-holder">
-            <div className="nes-field">
-              <label htmlFor="password_field" id="label-register">
-                Your Password
-              </label>
-              <input
-                type="password"
-                className={passClass}
-                onChange={(e) =>
-                  progressCheck(
-                    e
-                  )
-                }
-              ></input>
-            </div>
+          <br />
+          <div className="nes-field">
+            <label htmlFor="password_field" id="label-register">
+              Your Password
+            </label>
+            <input
+              type="password"
+              className={passClass}
+              onChange={(e) => progressCheck(e)}
+            ></input>
           </div>
-
-          <div className="item-holder">
-            <div className="nes-field">
-              <label htmlFor="password_field" id="label-register">
-                Your Password (Again)
-              </label>
-              <input
-                type="password"
-                className={passClass}
-                onChange={(e) =>
-                  isPassMatch(e, registerObject.password, setPassClass)
-                }
-              ></input>
-            </div>
+          <br />
+          <div className="nes-field">
+            <label htmlFor="password_field" id="label-register">
+              Your Password (Again)
+            </label>
+            <input
+              type="password"
+              className={passClass}
+              onChange={(e) =>
+                isPassMatch(e, registerObject.password, setPassClass)
+              }
+            ></input>
           </div>
-
-          <div className="item-holder">
-            <div className="nes-field">
-              <progress
-                className={progressStatus}
-                id="progress-register"
-                value={progressValue}
-                max="100"
-              ></progress>
-            </div>
+          <br />
+          <div className="nes-field">
+            <progress
+              className={progressStatus}
+              id="progress-register"
+              value={progressValue}
+              max="100"
+            ></progress>
           </div>
-
-          <div className="item-holder">
-            <div className="nes-field">
-              <label id="label-register">Date of Birth</label>
-              <input
-                type="date"
-                className="textbox-register nes-pointer"
-                id="date-register"
-              ></input>
-            </div>
+          <br />
+          <div className="nes-field">
+            <label id="label-register">Date of Birth</label>
+            <input
+              type="date"
+              className="textbox-register nes-pointer"
+              id="date-register"
+            ></input>
           </div>
-          <div className="item-holder">
-            <div className="button-register-container">
-              <span
-                className="button-register nes-pointer"
-                onClick={(e) => {
-                  registerClick(e);
-                }}
-              >
-                Register
-              </span>
-            </div>
+          <br />
+          <div className="button-register-container">
+            <span
+              className="button-register nes-pointer"
+              onClick={(e) => {
+                registerClick(e);
+              }}
+            >
+              Register
+            </span>
           </div>
         </div>
       </div>
