@@ -119,11 +119,11 @@ const Register: FC = () => {
         className="nes-container with-title is-centered"
         id="register-form-container"
       >
-        <p className="title" id="title">
+        <p className="title" id="title-register">
           Welcome to Register!
         </p>
 
-        <div className="form-container">
+        <div className="register-form-container">
           <div className="nes-field">
             <label htmlFor="name_field" id="label-register">
               E-Mail

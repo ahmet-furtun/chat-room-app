@@ -1,70 +1,96 @@
-.container-login{
-    height: 100vh;
-    background-image: url('../../images/background-login.png');
-    padding: 1% 22%;
+.container-login {
+  height: 100vh;
+  background-image: url("../../images/background-login.png");
 
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #login-form-container {
-    padding: 3.8% 0;
-    font-size: 15px;
-    background-color: darkslategray;
-    opacity: 0.8;
-    margin: 8% 0;
-  }
+  background-color: darkslategray;
+  opacity: 0.8;
+  width: 40rem;
 
-  .textbox-login {
-    border: 0.3em solid black;
-    font-family: "Press Start 2P", cursive;
-    text-decoration: none;
-    width: 45.5%;
-    padding: 0.5% 0;
-  }
-  
-  .textbox-login:hover {
-    border: 0.3em solid grey;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .button-login-container {
-    margin: 3% 0;
-  }
+.login-form-container{
+  height: 20rem;
   
-  .button-login {
-    font-family: "Press Start 2P", cursive;
-    color: inherit;
-    font-size: inherit;
-    background: white;
-    padding: 0.3rem 1.2rem;
-    border: 3px solid black;
-    margin-right: 2.6rem;
-    box-shadow: 0 0 0 black;
-    transition: all 0.2s;
-  
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  .button-login:last-child {
-    margin: 0;
-  }
-  
-  .button-login:hover {
-    box-shadow: 0.4rem 0.4rem 0 black;
-    transform: translate(-0.4rem, -0.4rem);
-  }
-  
-  .button-login:active {
-    box-shadow: 0 0 0 black;
-    transform: translate(0, 0);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .item-holder-login{
-    margin: 2% 0;
-  }
+.textbox-login {
+  border: 0.3em solid black;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+  width: 25rem;
+  padding: 0.5% 0;
+}
+
+.textbox-login:hover {
+  border: 0.3em solid grey;
+}
+
+.button-login {
+  font-family: "Press Start 2P", cursive;
+  color: inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 1.2rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button-login:last-child {
+  margin: 0;
+}
+
+.button-login:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+.button-login:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+
+#label-login{
+  color: white;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#title-login {
+  background-color: black;
+  color: white;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}

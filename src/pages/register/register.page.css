@@ -1,110 +1,133 @@
- .container-register {
-    height: 100vh;
-    background-image: url("../../images/background-login.png");
-  
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.container-register {
+  height: 100vh;
+  background-image: url("../../images/background-login.png");
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  #register-form-container{
-    background-color: darkslategray;
-    opacity: 0.8;
-    width: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
+#register-form-container {
+  background-color: darkslategray;
+  opacity: 0.8;
+  width: 50rem;
 
-  #title {
-    background-color: black;
-    color: white;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .form-container{
-    
-  }
+#title-register {
+  background-color: black;
+  color: white;
 
-  .textbox-register{
-    border: 0.3em solid black;
-    font-family: "Press Start 2P", cursive;
-    text-decoration: none;
-    width: 50vh;
-    padding: 0.5% 0;
-  }
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 
-  .textbox-register:hover {
-    border: 0.3em solid grey;
-  }
-  
-  .textbox-register-success {
-    border: 0.3em solid green;
-    font-family: "Press Start 2P", cursive;
-    text-decoration: none;
-    width: 50vh;
-    padding: 0.5% 0;
-  }
-  
-  .textbox-register-success:hover {
-    border: 0.3em solid lightgreen;
-  }
-  
-  .textbox-register-error {
-    border: 0.3em solid red;
-    font-family: "Press Start 2P", cursive;
-    text-decoration: none;
-    width: 50vh;
-    padding: 0.5% 0;
-  }
-  
-  .textbox-register-error:hover {
-    border: 0.3em solid orangered;
-  }
-  
-  #progress-register {
-    width: 50vh;
-    height: 20px;
-  }
+.register-form-container {
+  height: 35rem;
 
-  .button-register-container {
-    margin: 3% 0;
-  }
-  
-  .button-register {
-    font-family: "Press Start 2P", cursive;
-    color: inherit;
-    font-size: inherit;
-    background: white;
-    padding: 0.3rem 1.2rem;
-    border: 3px solid black;
-    margin-right: 2.6rem;
-    box-shadow: 0 0 0 black;
-    transition: all 0.2s;
-  
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-  
-  .button-register:last-child {
-    margin: 0;
-  }
-  
-  .button-register:hover {
-    box-shadow: 0.4rem 0.4rem 0 black;
-    transform: translate(-0.4rem, -0.4rem);
-  }
-  
-  .button-register:active {
-    box-shadow: 0 0 0 black;
-    transform: translate(0, 0);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.textbox-register {
+  border: 0.3em solid black;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+  width: 25rem;
+  padding: 0.5% 0;
+}
+
+.textbox-register:hover {
+  border: 0.3em solid grey;
+}
+
+.textbox-register-success {
+  border: 0.3em solid green;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+  width: 25rem;
+  padding: 0.5% 0;
+}
+
+.textbox-register-success:hover {
+  border: 0.3em solid lightgreen;
+}
+
+.textbox-register-error {
+  border: 0.3em solid red;
+  font-family: "Press Start 2P", cursive;
+  text-decoration: none;
+  width: 25rem;
+  padding: 0.5% 0;
+}
+
+.textbox-register-error:hover {
+  border: 0.3em solid orangered;
+}
+
+#progress-register {
+  width: 25rem;
+  height: 20px;
+}
+
+.button-register-container {
+  margin: 3% 0;
+}
+
+.button-register {
+  font-family: "Press Start 2P", cursive;
+  color: inherit;
+  font-size: inherit;
+  background: white;
+  padding: 0.3rem 1.2rem;
+  border: 3px solid black;
+  margin-right: 2.6rem;
+  box-shadow: 0 0 0 black;
+  transition: all 0.2s;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.button-register:last-child {
+  margin: 0;
+}
+
+.button-register:hover {
+  box-shadow: 0.4rem 0.4rem 0 black;
+  transform: translate(-0.4rem, -0.4rem);
+}
+
+.button-register:active {
+  box-shadow: 0 0 0 black;
+  transform: translate(0, 0);
+}
+
+#label-register {
+  color: white;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
