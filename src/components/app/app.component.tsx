@@ -1,4 +1,4 @@
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "../../pages/home/home.page";
@@ -9,7 +9,13 @@ import "../../common/styles";
 import "./app.component.css";
 import "nes.css/css/nes.min.css";
 
+import { CheckAuthentication } from "../../utils/CheckAuthentication"
+
 const App: FC = () => {
+  useEffect(() => {
+    CheckAuthentication();
+   }, []);
+  
   return (
     <div>
       <Router>

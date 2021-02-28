@@ -8,6 +8,10 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 
 import "./login.page.css";
 
+import { connect } from "react-redux";
+import { loginUser } from "../../redux/actions/userActions"
+import store from "../../redux/store";
+
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -37,16 +41,24 @@ const Login: FC = () => {
   const classes = useStyles();
 
   const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const [open, setOpen] = useState(false);
   const [openModal, setOpenModal] = React.useState(false);
   const [modalStyle] = React.useState(getModalStyle);
   const [valueOfModalsInput, setValueOfModalsInput] = useState("");
 
-  let errorData: IErrorMessage = { message: "Mesaj 1", code: 0, status: true };
+  let errorData: IErrorMessage = { message: "Mesaj 1", code: 0, status: false };
 
   const handleLogin = () => {
     if (errorData.status) setOpen(true);
+
+    let userData = {
+      email: email,
+      password: password
+    };
+    
+    store.dispatch(loginUser(userData));
   };
 
   const changeHandleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -136,7 +148,9 @@ const Login: FC = () => {
             <input
               type="password"
               className="textbox-login"
-              onChange={(e) => {}}
+              onChange={(e) => {
+                setPassword(e.target.value);
+              }}
             ></input>
           </div>
           <br />
@@ -174,4 +188,17 @@ const Login: FC = () => {
   );
 };
 
-export default Login;
+//this map the states to our props in this functional component
+const mapStateToProps = (state: any) => ({
+  user: state.user,
+  UI: state.UI
+});
+
+//this map actions to our props in this functional component
+const mapActionsToProps = {
+  loginUser
+};
+
+export default connect(mapStateToProps, mapActionsToProps)(Login)
+
+// export default Login;
