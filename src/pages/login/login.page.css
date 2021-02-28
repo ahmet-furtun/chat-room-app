@@ -27,6 +27,23 @@
   flex-direction: column;
 }
 
+.reminder{
+  color: rgb(242, 134, 88);
+  text-decoration: underline;
+  font-size: 0.8rem;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.reminder:hover{
+  color: rgb(246, 193, 125);
+}
+
 .textbox-login {
   border: 0.3em solid black;
   font-family: "Press Start 2P", cursive;
@@ -93,4 +110,13 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+#modal-div{
+  background-color: rgb(206, 191, 191);
+  border: 8px solid rgb(15, 90, 151);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
