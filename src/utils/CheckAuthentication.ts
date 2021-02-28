@@ -9,12 +9,8 @@ export const CheckAuthentication = () => {
   if (authToken) {
     const decodedToken: any = jwtDecode(authToken);
     console.log(decodedToken);
-    if (decodedToken.exp * 1000 < Date.now()) {
-      store.dispatch(logoutUser());
-    } else {
-      store.dispatch({ type: SET_AUTHENTICATED });
-      axios.defaults.headers.common["Authorization"] = authToken;
-      store.dispatch(getUserData());
-    }
+    store.dispatch({ type: SET_AUTHENTICATED });
+    axios.defaults.headers.common["Authorization"] = "Bearer " + authToken;
+    store.dispatch(getUserData());
   }
 };
