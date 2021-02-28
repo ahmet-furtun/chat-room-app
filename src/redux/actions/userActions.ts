@@ -11,14 +11,13 @@ import {
 import axios from "axios";
 
 export const loginUser = (userData: any, history: any) => (dispatch: any) => {
-  console.log(userData)
   dispatch({ type: LOADING_UI });
   
   axios
     .post("https://reqres.in/api/login", userData)
     .then((res) => {
       const token = `Bearer ${res.data.token}`;
-      localStorage.setItem("token", `Bearer ${res.data.token}`); //setting token to local storage
+      localStorage.setItem("token", `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c`); //setting token to local storage
       axios.defaults.headers.common["Authorization"] = token; //setting authorize token to header in axios
       dispatch(getUserData());
       dispatch({ type: CLEAR_ERRORS });
@@ -42,10 +41,9 @@ export const getUserData = () => (dispatch: any) => {
   axios
     .get("https://reqres.in/api/users/1")
     .then((res) => {
-      console.log("user data", res.data);
       dispatch({
         type: SET_USER,
-        payload: res.data,
+        payload: res.data.data,
       });
     })
     .catch((err) => {
