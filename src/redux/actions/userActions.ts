@@ -10,7 +10,7 @@ import {
 
 import axios from "axios";
 
-export const loginUser = (userData: any) => (dispatch: any) => {
+export const loginUser = (userData: any, history: any) => (dispatch: any) => {
   console.log(userData)
   dispatch({ type: LOADING_UI });
   
@@ -25,7 +25,7 @@ export const loginUser = (userData: any) => (dispatch: any) => {
       console.log("success");
       
       // redirect user to dashboard
-      // ...
+      history.push("/");
     })
     .catch((err) => {
       dispatch({

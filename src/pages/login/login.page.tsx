@@ -12,6 +12,8 @@ import { connect } from "react-redux";
 import { loginUser } from "../../redux/actions/userActions"
 import store from "../../redux/store";
 
+import { useHistory } from "react-router-dom";
+
 function getModalStyle() {
   const top = 50;
   const left = 50;
@@ -38,6 +40,7 @@ const useStyles = makeStyles((theme: Theme) =>
 );
 
 const Login: FC = () => {
+  const history = useHistory();
   const classes = useStyles();
 
   const [email, setEmail] = useState("");
@@ -58,7 +61,7 @@ const Login: FC = () => {
       password: password
     };
     
-    store.dispatch(loginUser(userData));
+    store.dispatch(loginUser(userData, history));
   };
 
   const changeHandleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
